@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>PetShop</title>
+	</head>
+	<body>
+		<h1>Relatorio de Veterinário</h1>
+			<ul th:each="veterinario : ${lista}">
+				<li th:number="${veterinario.id}">
+				<li th:text="${veterinario.nome}">
+				<li th:text="${veterinario.crmv}">
+				<li th:text="${veterinario.especialidade}">
+			</ul>
+		
+	</body>
+</html>

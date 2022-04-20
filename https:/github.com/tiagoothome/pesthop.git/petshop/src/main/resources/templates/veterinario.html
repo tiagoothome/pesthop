@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PetShop</title>
+</head>
+<body>
+	<div>
+		<h1>Petshop</h1>
+		<h2>Happy Pets</h2>
+	</div>
+
+	<div>
+		<h3>Área do Veterinário</h3>
+	</div>
+
+	<form th:action="@{/CadastroVeterinario}" method="POST" th:object="${veterinario}">
+		<label for="CadastroVeterinario">Cadastre-se:</label>
+		<fieldset id="Cadastro">
+			<p>Crie um ID: <input type="number" th:field="*{id}></p>
+			<p>Nome: <input type="texto" th:fiel="*{nome}"></p>
+			<p>CRMV: <input type="texto" th:field="*{crmv}"></p>
+			<p>Especialidade: <input type="texto" th:field="*{especialidade}"></p>
+		</fieldset>
+
+	</form>
+
+<input type="submit" name="cadastro" value="Cadastrar">
+</body>
+</html>
